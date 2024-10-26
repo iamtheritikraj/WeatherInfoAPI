@@ -3,19 +3,8 @@
 
 <p>This project is a RESTful API built with Spring Boot that retrieves weather information based on a given pincode and date. It minimizes API calls by storing latitude, longitude, and weather data in an H2 in-memory database. The API interacts with the OpenWeather API to fetch the current weather data.</p>
 
-<h2>Table of Contents</h2>
-<ul>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#technologies-used">Technologies Used</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#setup-instructions">Setup Instructions</a></li>
-    <li><a href="#api-endpoints">API Endpoints</a></li>
-    <li><a href="#running-the-application">Running the Application</a></li>
-    <li><a href="#testing-the-api">Testing the API</a></li>
-    <li><a href="#license">License</a></li>
-</ul>
 
-<h2 id="features">Features</h2>
+<h2>Features</h2>
 <ul>
     <li>Fetch weather information by pincode and date.</li>
     <li>Convert temperature from Kelvin to Celsius before saving.</li>
@@ -24,17 +13,17 @@
     <li>H2 in-memory database for development and testing.</li>
 </ul>
 
-<h2 id="technologies-used">Technologies Used</h2>
+<h2>Technologies Used</h2>
 <ul>
-    <li>Java 17</li>
-    <li>Spring Boot 2.x</li>
+    <li>Java</li>
+    <li>Spring Boot</li>
     <li>Spring Data JPA</li>
     <li>H2 Database (in-memory)</li>
     <li>RestTemplate for HTTP requests</li>
     <li>OpenWeather API for weather data</li>
 </ul>
 
-<h2 id="prerequisites">Prerequisites</h2>
+<h2>Prerequisites</h2>
 <p>Make sure you have the following installed:</p>
 <ul>
     <li>JDK 17 or higher</li>
@@ -42,7 +31,7 @@
     <li>An IDE (e.g., IntelliJ IDEA, Eclipse)</li>
 </ul>
 
-<h2 id="setup-instructions">Setup Instructions</h2>
+<h2>Setup Instructions</h2>
 <ol>
     <li><strong>Clone the repository:</strong>
         <pre>
@@ -63,7 +52,7 @@
     </li>
 </ol>
 
-<h2 id="api-endpoints">API Endpoints</h2>
+<h2>API Endpoints</h2>
 
 <h3>Get Weather Information</h3>
 <ul>
@@ -94,15 +83,13 @@
 curl -X POST http://localhost:8080/weather -H "Content-Type: application/json" -d '{"pincode":"411014","forDate":"2020-10-15"}'
 </pre>
 
-<h2 id="running-the-application">Running the Application</h2>
+<h2>Running the Application</h2>
 <p>To run the application, use the following command:</p>
 <pre>
 mvn spring-boot:run
 </pre>
 <p>The application will start on <code>http://localhost:8080</code>.</p>
 
-<h2 id="testing-the-api">Testing the API</h2>
-<p>You can test the API using Postman or any other REST client. Ensure the server is running and use the <code>/weather</code> endpoint as described above.</p>
 
 <h2 id="license">License</h2>
 <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
